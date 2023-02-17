@@ -1,21 +1,29 @@
-import { createSlice } from '@reduxjs/toolKit';
-import fetchCurrency from '../action/coinAction';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
-  currencies: [],
+  coins: [],
   status: null,
 };
 
-const currencyReducer = createSlice({
-  name: 'currency',
+export const fetchCoins = createAsyncThunk('coins', async () => {
+  const response = await fetch(
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false',
+  );
+  const data = await response.json();
+  return data;
+});
+
+const coinsSlice = createSlice({
+  name: 'coins',
   initialState,
-  extraReducers: (builder) => {
-    builder.addCase(fetchCurrency.fulfilled, (state, action) => {
-      const items = state;
-      items.status = 'success';
-      items.currencies = action.payload;
+  reducers: {},
+  extraReducers(reduce) {
+    reduce.addCase(fetchCoins.fulfilled, (state, action) => {
+      const isFulfilled = state;
+      isFulfilled.status = 'fulfilled';
+      isFulfilled.coins = action.payload;
     });
   },
 });
 
-export default currencyReducer.reducer;
+export default coinsSlice.reducer;
