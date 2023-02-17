@@ -169,6 +169,7 @@ If you like this project, you can show your support by giving it a star.
 
 I would like to thank...
 
+- Nelson Sakwa on Behance for the Original design idea
 - Microverse 
 - My coding partners, morning session team, and standup team for their contributions.
 

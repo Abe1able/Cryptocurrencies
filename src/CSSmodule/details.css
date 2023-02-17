@@ -13,6 +13,10 @@
   background-color: black;
 }
 
+.detailsection:nth-child(even) {
+    background-color: darkgrey;
+}
+
 .imgDt {
   width: 15rem;
 }
