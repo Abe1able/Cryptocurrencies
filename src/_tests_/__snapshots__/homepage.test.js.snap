@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`homepage  check if it rendering or not 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <input
+      class="input"
+      placeholder="Search a coin"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    class="grid"
+  />
+</div>
+`;
