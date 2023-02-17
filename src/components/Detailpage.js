@@ -18,7 +18,7 @@ const Details = () => {
   return (
     <div className="detailsection">
       <div>
-        <img className="imgDt" src={state.image} alt="img" />
+        <img className="imgDt" src={`${state.image}`} alt="img" />
       </div>
       <ul className="detailPage">
         <li>
