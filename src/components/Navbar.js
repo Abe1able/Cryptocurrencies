@@ -11,13 +11,13 @@ const Navbar = () => (
     <nav className="nav">
       <div>
         <Link to="/">
-          <BiChevronLeft />
+          <BiChevronLeft className="backBtn" />
         </Link>
       </div>
       <div>
-        <img alt="logo" src={Logo} />
+        <img className="imgLogo" alt="logo" src={Logo} />
       </div>
-      <ul>
+      <ul className='settings'>
         <li><FiMic /></li>
         <li><CiSettings /></li>
       </ul>
