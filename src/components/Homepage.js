@@ -1,18 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
-import { fetchCoins } from '../redux/reducer/currencies';
 import Display from './display';
 
 const Home = () => {
-  const dispatch = useDispatch();
   const { coins } = useSelector((state) => state.coins);
   const [search, setSearch] = useState('');
-  useEffect(() => {
-    dispatch(fetchCoins());
-  }, []);
-
+  const el = coins.length;
   return (
     <>
       <div className="searchDiv">
@@ -24,6 +19,10 @@ const Home = () => {
           placeholder="search"
         />
         <FaSearch className="searchIcon" />
+        <p>
+          Hello
+          {el}
+        </p>
       </div>
       <div className="grid">
         {coins.filter((searchCoin) => searchCoin.name.toLowerCase()
