@@ -10,7 +10,7 @@ const Navbar = () => (
   <header className="header">
     <nav className="nav">
       <div>
-        <Link to="home">
+        <Link to="/">
           <BiChevronLeft />
         </Link>
       </div>
