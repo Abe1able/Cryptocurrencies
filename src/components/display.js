@@ -1,5 +1,7 @@
 /* eslint-disable */
 import PropTypes from 'prop-types';
+import { BsArrowRightCircle } from 'react-icons/bs';
+import '../CSSmodule/display.css';
 
 const Display = ({ items }) => {
   const {
@@ -7,11 +9,12 @@ const Display = ({ items }) => {
   } = items;
 
   return (
-    <section className="mainDetails" key={id}>
+    <section className="details" key={id}>
+      <BsArrowRightCircle />
       <img className="img" src={image} alt={`${name}icon`} />
-      <p>{name}</p>
+      <p className='headText' >{name}</p>
       <p>
-        $
+        Price: $
         {price}
       </p>
     </section>

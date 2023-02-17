@@ -1,0 +1,28 @@
+.details{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding: 10px;
+}
+
+.details:nth-child(even){
+    background-color: rgb(224, 18, 18);
+}
+
+.img{ width: 5rem;
+align-self: center;
+}
+
+.text{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.headText{
+    font-size: 24px;
+}

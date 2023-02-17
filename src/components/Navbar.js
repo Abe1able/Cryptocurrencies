@@ -17,7 +17,7 @@ const Navbar = () => (
       <div>
         <img className="imgLogo" alt="logo" src={Logo} />
       </div>
-      <ul className='settings'>
+      <ul className="settings">
         <li><FiMic /></li>
         <li><CiSettings /></li>
       </ul>

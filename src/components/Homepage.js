@@ -24,7 +24,7 @@ const Home = () => {
           .includes(search.toLowerCase()))
           .map((coins) => (
             <div className=" sec1" key={coins.id}>
-              <NavLink state={coins} to="/display">
+              <NavLink className="text" state={coins} to="/display">
                 <Display
                   items={coins}
                 />
