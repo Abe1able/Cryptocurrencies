@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
+
 function App() {
   return (
     <div className="App">
-      <Navbar />  
+      <Navbar />
       <Routes>
         <Route path="home" element={<Homepage />} />
       </Routes>
