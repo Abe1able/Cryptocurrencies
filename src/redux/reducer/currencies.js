@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolKit';
-import { fetchCurrency } from './coinAction';
+import { fetchCurrency } from '../action/coinAction';
 
 const initialState = {
     currencies: [],
