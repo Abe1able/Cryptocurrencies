@@ -1,6 +1,8 @@
 /* eslint-disable */
-import { useLocation } from 'react-router-dom';
-import React from 'react';
+import { useLocation } from "react-router-dom";
+import React from "react";
+import { FiArrowUp, FiArrowDown } from "react-icons/fi";
+import "../CSSmodule/details.css";
 
 const Details = () => {
   const location = useLocation();
@@ -9,52 +11,61 @@ const Details = () => {
     if (state.total_supply == null) {
       return <span>{`${state.id.total_supply}`}</span>;
     }
-    return <span>{`Total Supply: ${state.total_supply.toLocaleString()}`}</span>;
+    return (
+      <span>{`Total Supply: ${state.total_supply.toLocaleString()}`}</span>
+    );
   };
   return (
-    <div>
+    <div className="detailsection">
       <div>
-        <img className="imgDt" src={state.image} alt="img" />        
+        <img className="imgDt" src={state.image} alt="img" />
       </div>
       <ul className="detailPage">
-        <li>Name
-          {` ${state.name}`}
+        <li>
+          <span>Name:</span>
+          <span>{` ${state.name}`}</span>
+        </li>
+        <li className="coinsIcon">
+          <span>Market cap rank:</span>
+          <span>{state.market_cap_rank}</span>
         </li>
         <li>
-        market_cap_rank:
-        {state.market_cap_rank}
+          <span>Market cap:</span>
+          <span>{` ${Number(state.market_cap).toLocaleString("en-US")}`}</span>
+        </li>
+        <li className="coinsIcon">
+          <span>Current price:</span>
+          <span>${state.current_price}</span>
         </li>
         <li>
-          market cap:
-          {` ${Number(state.market_cap).toLocaleString('en-US')}`}
+          <span>ATH:</span>
+          <span>{` ${state.ath.toLocaleString()}`}</span>
+        </li>
+        <li className="coinsIcon">
+          <span>Circulating Supply:</span>
+          <span>{` ${state.circulating_supply.toLocaleString()}`}</span>
         </li>
         <li>
-          price:
-          {state.current_price}
+          <span>Trading Volume:</span>
+          <span>{` ${state.total_volume.toLocaleString()}`}</span>
+        </li>
+        <li className="coinsIcon">
+          <span>High 24hr:</span>
+          <span>
+            <FiArrowUp className="green" />
+            {` ${state.high_24h.toLocaleString()}`}
+          </span>
         </li>
         <li>
-          ATH:
-          {` ${state.ath.toLocaleString()}`}
+          <span>Low 24hr:</span>
+          <span>
+            <FiArrowDown className="red" />
+            {` ${state.low_24h.toLocaleString()}`}
+          </span>
         </li>
-        <li>
-          Circulating Supply:
-          {` ${state.circulating_supply.toLocaleString()}`}
-        </li>
-        <li>
-          Trading Volume:
-          {` ${state.total_volume.toLocaleString()}`}
-        </li>
-        <li>
-          High 24hr:
-          {` ${state.high_24h.toLocaleString()}`}
-        </li>
-        <li>
-          Low 24hr:
-          {` ${state.low_24h.toLocaleString()}`}
-        </li>
-        <li>
-          Price Change 24hr:
-          {` ${state.price_change_24h.toLocaleString()}`}
+        <li className="coinsIcon">
+          <span>Price Change 24hr:</span>
+          <span>{` ${state.price_change_24h.toLocaleString()}`}</span>
         </li>
       </ul>
     </div>
