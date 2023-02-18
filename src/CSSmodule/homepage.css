@@ -67,16 +67,25 @@
   padding: 10px;
 }
 
-.src1, .src2, .src5, .src6, .src9 {
+.src1,
+.src2,
+.src5,
+.src6,
+.src9 {
   background-color: rgb(40, 40, 48);
 }
 
 @media (min-width: 720px) {
-  .grid { 
+  .grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: black;
   }
-  .src1, .src2, .src5, .src6, .src9 {
+
+  .src1,
+  .src2,
+  .src5,
+  .src6,
+  .src9 {
     background-color: black;
   }
-} 
+}
