@@ -7,14 +7,10 @@
 .detailsection {
   margin-top: 5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   align-items: center;
   background-color: black;
-}
-
-.detailsection:nth-child(even) {
-  background-color: darkgrey;
 }
 
 .imgDt {

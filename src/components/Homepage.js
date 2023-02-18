@@ -22,8 +22,8 @@ const Home = () => {
       <div className="grid">
         {coins.filter((searchCoin) => searchCoin.name.toLowerCase()
           .includes(search.toLowerCase()))
-          .map((coins) => (
-            <div className=" sec1" key={coins.id}>
+          .map((coins, index) => (
+            <div className={`src${index}`} key={coins.id}>
               <NavLink className="text" state={coins} to={`/detail/${coins.name}`}>
                 <Display
                   items={coins}
