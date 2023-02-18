@@ -9,7 +9,7 @@ const initialState = {
 export const fetchCoins = createAsyncThunk('coins', async () => {
   const response = await fetch(APILINK);
   const data = await response.json();
-  return data;
+  return data.slice(0, 10);
 });
 
 const coinsSlice = createSlice({
