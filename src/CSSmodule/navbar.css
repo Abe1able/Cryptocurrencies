@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.backBtn {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.imgLogo {
+  width: 7rem;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.settings li {
+  font-size: 25px;
+  color: #fff;
+}
